@@ -58,7 +58,7 @@ public class TwoSumTest {
     }
 
     @Test
-    public void twoSum_upgrade1 () {
+    public void twoSum_upgrade1 () throws Exception {
 
 
         int[] result = ts.twoSum_upgraded(arg1, target);
@@ -67,7 +67,7 @@ public class TwoSumTest {
     }
 
     @Test
-    public void twoSum_upgrade2 () {
+    public void twoSum_upgrade2 () throws Exception {
 
 
         int[] result = ts.twoSum_upgraded(arg2, target2);
