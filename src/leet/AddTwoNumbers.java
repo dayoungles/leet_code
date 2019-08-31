@@ -1,6 +1,6 @@
 package leet;
 
-import leet.model.ListNode;
+//import leet.model.ListNode;
 
 import java.util.ArrayList;
 
