@@ -6,15 +6,21 @@ public class UncommonWord {
 
     public String[] uncommonFromSentences(String A, String B) {
         Map<String, Integer> map = new HashMap<>();
-        List<String> aResult = new ArrayList<String>(Arrays.asList(A.split(" ")));
-        List<String> bResult = new ArrayList<String>(Arrays.asList(B.split(" ")));
 
-        for (String word : aResult) {
-            map.put(word, map.getOrDefault(word, 0) +1);
+        for (String word : A.split(" ")) {
+            if (!map.containsKey(word)) {
+                map.put(word, 1);
+            } else {
+                map.put(word, 0);
+            }
         }
 
-        for (String word : bResult) {
-            map.put(word, map.getOrDefault(word, 0) +1);
+        for (String word : B.split(" ")) {
+            if (!map.containsKey(word)) {
+                map.put(word, 1);
+            } else {
+                map.put(word, 0);
+            }
         }
 
         List<String> array = new LinkedList<>();
