@@ -24,8 +24,6 @@ public class MaxIncreaseKeepingSkylineTest {
 
         assertEquals(35, sky.maxIncreaseKeepingSkyline(sample));
 
-
-
     }
 
     @Test
