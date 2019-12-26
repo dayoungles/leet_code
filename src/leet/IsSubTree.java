@@ -21,7 +21,13 @@ public class IsSubTree {
             if(left && right) {
                 return true;
             } else {
-                return false;
+                boolean left = isSameNode(s.left, t);
+                boolean right = isSameNode(s.right, t);
+                if(left || right){
+                    return true;
+                } else {
+                    return false;
+                }
             }
         } else {
             boolean left = isSameNode(s.left, t);
