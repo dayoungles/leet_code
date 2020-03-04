@@ -17,11 +17,11 @@ public class AddTwoNumbersTest {
 
     @Before
     public void setup() {
-        a.setNext(b);
-        b.setNext(c);
-
-        d.setNext(e);
-        e.setNext(f);
+//        a.setNext(b);
+//        b.setNext(c);
+//
+//        d.setNext(e);
+//        e.setNext(f);
     }
 
     @Test

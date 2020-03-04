@@ -1,0 +1,47 @@
+예외조건
+비어있을 때
+주어진 수가 음수일 때
+값이 하나 뿐일 떄
+값이 두개 뿐일 때
+
+
+Integer.MAX_VALUE;
+Integer.MIN_VALUE;
+
+인티저를 스트링으로 -> String.valueOf(int);
+string to integer Integer.parseInt(string);
+
+String builder
+StringBuilder(str).reverse().toString() -> 스트링 됨
+
+reverse number /10하면 1의 자리부터 나머지로 건질 수 있음.
+
+계산
+Math
++-*/
+모듈러는 나머지를 넘길 때
+나누기는 몫을 넘길 때
+제곱승은 Math.pow
+Math.max()
+Math.min()
+
+
+재귀
+재귀 대신 while을 쓸 떄 조건문을 잘 쓰는 것으로 쉽게 처리할 수 있다. -> && ||(Merge Two Tree)
+
+parlindrome: 회문: 앞뒤가 똑같은 수박수박수
+
+while 조건을 잘 봐봐..놓치는게 있을 수 있어ㅠ 테스트 케이스를 여러개 만들어서 직접 돌려봐야 함.
+
+Tree
+전위 순회: 루트가 전위라는 소리임.
+    IsSubTree 에  문제 푼 기록이 하나 있습니다.
+
+Map to Arraylist:
+    SubdomainVisits에 있음
+
+sorting
+Arrays.sort()
+For루프를 세개 써야 하는 상황 -> 소팅을 해도 되는지 확인(정확한 인덱스를 내놓으라고 하지 않는 이상)
+
+symmetry : 대칭! -> StrSymmetrypoint

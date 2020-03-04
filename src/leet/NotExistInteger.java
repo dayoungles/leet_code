@@ -19,9 +19,9 @@ public class NotExistInteger {
             }
         }
 
-        for (int i; i< 1000000; i++){
-
-        }
+//        for (int i; i< 1000000; i++){
+//
+//        }
 
         return 0;
     }

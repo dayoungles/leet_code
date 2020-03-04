@@ -4,7 +4,8 @@ public class IntegerGap {
     public int solution(int N) {
         int gap = 0;
         String bin = Integer.toBinaryString(N);
-        for (int i = 0; i < bin.length(); i++){
+
+        for (int i = 0; i < bin.length(); i++) {
             char eachBinary = bin.charAt(i);
             if (eachBinary == '1') {
                 int gapCount = 0;
@@ -23,7 +24,6 @@ public class IntegerGap {
         }
         System.out.println(gap);
         return gap;
-
     }
 
 }
