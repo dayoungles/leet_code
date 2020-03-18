@@ -11,6 +11,8 @@ public class NewJewelsInStonesTest {
         String j = "aA";
         String s = "aAAbbbb";
         assertEquals(3, js.numJewelsInStones(j, s));
+        assertEquals(3, js.numJewelsInStones2(j,s));
+        assertEquals(3, js.reduceMemoryUsage(j,s));
 
     }
 
@@ -19,5 +21,7 @@ public class NewJewelsInStonesTest {
         String j = "z";
         String s = "ZZ";
         assertEquals(0, js.numJewelsInStones(j, s));
+        assertEquals(0, js.numJewelsInStones2(j, s));
+        assertEquals(0, js.reduceMemoryUsage(j, s));
     }
 }

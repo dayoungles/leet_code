@@ -1,7 +1,9 @@
 package leet;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class NewJewelsInStones {
     public int numJewelsInStones(String J, String S) {
@@ -17,5 +19,27 @@ public class NewJewelsInStones {
         }
 
         return count;
+    }
+
+    public int reduceMemoryUsage(String J, String S) {
+        int count = 0;
+        for (char c : S.toCharArray()) {
+            if(J.indexOf(c) != -1) count++;
+        }
+
+
+        return count;
+    }
+
+    public int numJewelsInStones2(String J, String S) {
+        Set<Character> set = new HashSet<>();
+        int result = 0;
+        for (char c: J.toCharArray() ) {
+            set.add(c);
+        }
+        for (char s : S.toCharArray()) {
+            if(set.contains(s)) result++;
+        }
+        return result;
     }
 }
