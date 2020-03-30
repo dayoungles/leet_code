@@ -1,25 +1,32 @@
 package leet;
 
 public class LongestPalindrome {
+    int low, maxlen;
     public String longestPalindrome(String s) {
+        int len = s.length();
 
-        if(s== null || s=="") return s;
-        int minIdx = 0;
-        int maxIdx = 0;
-        int maxLen = 0;
-
-        for(int i =0; i< s.length(); i++) {
-            int len1 = extendOut(s,i, i);
-            int len2 = extendOut(s,i, i+1);
-            maxLen = (maxLen >= maxIdx-minIdx+1) ? maxLen : maxIdx-minIdx+1;
+        if(len<2) {
+            return s;
         }
-        
-        return null;
+
+        for (int i = 0; i < len - 1; i++) {
+            extendIdx(s, i, i);
+            extendIdx(s, i, i + 1);
+
+        }
+        return s.substring(low, low+maxlen);
 
     }
 
-    private int extendOut(String s, int i, int i1) {
-
-        return 0;
+    private void extendIdx(String s, int j, int k) {
+        while(j >= 0 && k< s.length() && s.charAt(j) == s.charAt(k)) {
+            j--;
+            k++;
+        }
+        if(maxlen < k-j-1) {
+            low = j +1;
+            maxlen = k - j - 1;
+        }
     }
+
 }
