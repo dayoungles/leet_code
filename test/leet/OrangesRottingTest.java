@@ -46,5 +46,14 @@ public class OrangesRottingTest {
 
     }
 
+    @Test
+    public void test_failed() {
+        int[] row1={1,2};
+        int[][] input = {row1};
+
+        int result = r.orangesRotting(input);
+        assertEquals(1, result);
+    }
+
 
 }
