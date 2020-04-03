@@ -20,9 +20,9 @@ public class OrangesRottingTest {
         int[] row3 = {0, 1, 1};
 
         int[][] input = {row1, row2, row3};
-        int result = r.orangesRotting(input);
-        assertEquals(4, result);
-
+//        int result = r.orangesRotting(input);
+//        assertEquals(4, result);
+        assertEquals(4, r.orangesRottingWithQueue(input));
     }
 
     @Test
@@ -34,6 +34,8 @@ public class OrangesRottingTest {
         int[][] input = {row1, row2, row3};
         int result = r.orangesRotting(input);
         assertEquals(-1, result);
+
+        assertEquals(-1, r.orangesRottingWithQueue(input));
     }
 
     @Test
@@ -43,6 +45,7 @@ public class OrangesRottingTest {
         int[][] input = {row1};
         int result = r.orangesRotting(input);
         assertEquals(0, result);
+        assertEquals(0, r.orangesRottingWithQueue(input));
 
     }
 
@@ -51,8 +54,9 @@ public class OrangesRottingTest {
         int[] row1={1,2};
         int[][] input = {row1};
 
-        int result = r.orangesRotting(input);
-        assertEquals(1, result);
+//        int result = r.orangesRotting(input);
+//        assertEquals(1, result);
+        assertEquals(1, r.orangesRottingWithQueue(input));
     }
 
 
