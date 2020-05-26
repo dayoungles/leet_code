@@ -4,20 +4,20 @@ import java.util.*;
 
 public class LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
-        Map<Character, Integer> map = new HashMap<>();
+        if (s.length() ==1) return s.length();
+        Set<Character> existSet = new HashSet<>();
         int max = 0;
-        for (int i =0; i< s.length(); i++){
-            if(!map.containsKey(s.charAt(i))){
-                map.put(s.charAt(i), i);
-            } else {
-                int idx = map.get(s.charAt(i));
-                max = i- idx+1;
+        int startIdx = 0;
+        int endIdx = 0;
 
-
+        while(endIdx < s.length() && startIdx < s.length()){
+            if(existSet.contains(s.charAt(endIdx))){
+                existSet.remove(s.charAt(startIdx++));
+            }else {
+                existSet.add(s.charAt(endIdx++));
+                max = Math.max(endIdx - startIdx, max);
             }
         }
-
-        return 0;
-
+        return max;
     }
 }
