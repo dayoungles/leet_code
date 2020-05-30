@@ -34,7 +34,6 @@ public class TwoSumTest {
         expected2[0] = 2;
         expected2[1] = 3;
 
-
     }
 
     @Test
@@ -75,4 +74,21 @@ public class TwoSumTest {
         assertEquals(expected2[1], result[1]);
     }
 
+    @Test
+    public void twoSum3_1 () throws Exception {
+
+
+        int[] result = ts.twoSum3(arg1, target);
+        assertEquals(expected1[0], result[0]);
+        assertEquals(expected1[1], result[1]);
+    }
+
+    @Test
+    public void twoSum3_2 () throws Exception {
+
+
+        int[] result = ts.twoSum3(arg2, target2);
+        assertEquals(expected2[0], result[0]);
+        assertEquals(expected2[1], result[1]);
+    }
 }

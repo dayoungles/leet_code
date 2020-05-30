@@ -3,6 +3,9 @@ package leet;
 import com.sun.tools.corba.se.idl.ExceptionGen;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class TwoSum {
     public int[] twoSum_original(int[] nums, int target) throws Exception {
@@ -39,5 +42,19 @@ public class TwoSum {
         }
 
         throw new Exception();
+    }
+
+    public int[] twoSum3(int[] nums, int target)  {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++){
+            if(map.containsKey(target-nums[i])) {
+                int[] result = {i, map.get(target-nums[i])};
+                return result;
+            }
+            map.put(nums[i], i);
+        }
+
+        return null;
+
     }
 }
