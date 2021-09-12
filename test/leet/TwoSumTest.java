@@ -35,7 +35,33 @@ public class TwoSumTest {
         expected2[1] = 3;
 
     }
+    @Test
+    public void test_20210913_2() throws Exception {
+        int[] nums = {3,2,4};
 
+        int[] a = ts.twoSum20210913(nums, 6);
+        assertEquals(1, a[0]);
+        assertEquals(2, a[1]);
+
+    }
+
+    @Test
+    public void test_20210913() throws Exception {
+        int[] nums = {2, 7, 11, 15};
+
+        int[] a = ts.twoSum20210913(nums, 18);
+        assertEquals(1, a[0]);
+        assertEquals(2, a[1]);
+
+    }
+
+    @Test
+    public void test_20200910() throws Exception {
+        int[] nums = {2, 7, 11, 15};
+
+        ts.twoSum20200910(nums, 9);
+
+    }
     @Test
     public void twoSum1() throws Exception {
         int[] expected = new int[2];
