@@ -11,6 +11,91 @@ public class AddTwoNumbers {
      * public class ListNode {
      *     int val;
      *     ListNode next;
+     *     ListNode() {}
+     *     ListNode(int val) { this.val = val; }
+     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+     * }
+     */
+    public ListNode addTwoNumbers20210915(ListNode l1, ListNode l2) {
+        if(l1 == null || l2 == null) return null;
+        ListNode newHead = new ListNode(0);
+        ListNode head = newHead;
+
+        int olim = 0;
+        while(l1!= null || l2 != null){
+            int a = 0;
+            int b = 0;
+
+            if(l1!= null) {
+                a = l1.val;
+            }
+
+            if(l2!= null) {
+                b = l2.val;
+            }
+
+            int sum = a+b+olim;
+
+            olim = sum / 10;
+            int remain = sum % 10;
+
+            newHead.next = new ListNode(remain);
+
+            newHead = newHead.next;
+            if(l1 != null) l1 = l1.next;
+            if(l2 != null) l2 = l2.next;
+        }
+
+        if(olim != 0) {
+            newHead.next = new ListNode(olim);
+        }
+
+        return head.next;
+    }
+
+    public ListNode addTwoNumbers20200904(ListNode l1, ListNode l2){
+        if(l1 == null || l2 == null) return null;
+        int olim = 0;
+        ListNode head = new ListNode(0);
+        ListNode idx = head;
+        while(l1 != null || l2 != null){
+//            int olim2 = olim;
+            int v1 = 0, v2 = 0;
+
+            if(l1 != null) {
+                v1 = l1.val;
+            }
+            if(l2 != null){
+                v2 = l2.val;
+            }
+
+            int sum = v1 + v2 + olim;
+            olim = sum / 10;
+            int remain = sum % 10;
+
+            idx.next = new ListNode(remain);
+            idx = idx.next;
+
+            if(l1 != null) {
+                l1 = l1.next;
+            }
+
+            if(l2 != null) {
+                l2 = l2.next;
+            }
+        }
+
+        if(olim != 0){
+            idx.next = new ListNode(olim);
+        }
+        return head.next;
+    }
+
+    /**
+     * Definition for singly-linked list.
+     * public class ListNode {
+     *     int val;
+     *     ListNode next;
      *     ListNode(int x) { val = x; }
      * }
      */
